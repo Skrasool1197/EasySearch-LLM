@@ -64,13 +64,13 @@ To run this project, you will need to add the following environment variables to
 
 
 - Home Page
-
-![front1](https://github.com/user-attachments/assets/0e90a792-5b9a-4170-be0a-2b1c7e88221d)
+![front](https://github.com/user-attachments/assets/3997df5c-d0b7-4852-a5fd-7b31b920e7f8)
 
 
 
 - Chat Interface
-![chat](https://github.com/user-attachments/assets/7fa56719-e5cb-4c9b-a236-f638e7bebdb3)
+![chat](https://github.com/user-attachments/assets/756e29ed-4b14-42ce-9a9d-3e436bc43ec8)
+
 
 ## Features
 
