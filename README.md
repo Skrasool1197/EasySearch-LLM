@@ -84,7 +84,7 @@ To run this project, you will need to add the following environment variables to
 
 - **Multimodal Query Support:**
 
- 1)**Wikipedia:** Fetches concise and relevant information.
+ 1) **Wikipedia:** Fetches concise and relevant information.
  
  2) **Arxiv:** Retrieves academic papers and research summaries.
   
