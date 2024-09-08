@@ -65,11 +65,14 @@ To run this project, you will need to add the following environment variables to
 ## Screenshots
 
 
-Home Page
+- Home Page
+
 ![front1](https://github.com/user-attachments/assets/0e90a792-5b9a-4170-be0a-2b1c7e88221d)
 
 
-Chat Interface
+
+- Chat Interface
+- 
 ![chat](https://github.com/user-attachments/assets/7fa56719-e5cb-4c9b-a236-f638e7bebdb3)
 
 ## Features
