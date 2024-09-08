@@ -65,11 +65,13 @@ To run this project, you will need to add the following environment variables to
 ## Screenshots
 
 
-
 Home Page
+![front1](https://github.com/user-attachments/assets/0e90a792-5b9a-4170-be0a-2b1c7e88221d)
 
 
 Chat Interface
+![chat](https://github.com/user-attachments/assets/7fa56719-e5cb-4c9b-a236-f638e7bebdb3)
+
 ## Features
 
 - **AI-powered Search:** Powered by Groq's Large Language Model (LLM), EasySearch can handle natural language input and provide detailed, relevant information.
@@ -82,9 +84,9 @@ Chat Interface
 
 - **Multimodal Query Support:**
 
-- **Wikipedia:** Fetches concise and relevant information.
-- **Arxiv:** Retrieves academic papers and research summaries.
-- **DuckDuckGo:** Returns general web search results.
+ 1)**Wikipedia:** Fetches concise and relevant information.
+ 2) **Arxiv:** Retrieves academic papers and research summaries.
+ 3) **DuckDuckGo:** Returns general web search results.
 
 
 
