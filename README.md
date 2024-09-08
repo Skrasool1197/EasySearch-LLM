@@ -21,8 +21,6 @@ Clone the repository:
 
 ```bash
   git clone https://github.com/Skrasool1197/EasySearch-LLM
-
-
 ```
 Install the required dependencies:
 
@@ -87,7 +85,9 @@ To run this project, you will need to add the following environment variables to
 - **Multimodal Query Support:**
 
  1)**Wikipedia:** Fetches concise and relevant information.
+ 
  2) **Arxiv:** Retrieves academic papers and research summaries.
+  
  3) **DuckDuckGo:** Returns general web search results.
 
 
