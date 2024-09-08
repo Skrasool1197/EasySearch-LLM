@@ -72,7 +72,6 @@ To run this project, you will need to add the following environment variables to
 
 
 - Chat Interface
-- 
 ![chat](https://github.com/user-attachments/assets/7fa56719-e5cb-4c9b-a236-f638e7bebdb3)
 
 ## Features
