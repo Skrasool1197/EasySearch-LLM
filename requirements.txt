@@ -1,0 +1,13 @@
+ipykernel
+streamlit
+python-dotenv
+langchain
+langchain-community
+arxiv
+wikipedia
+langchain-text-splitters
+lxml
+langchain-groq
+langchain_core
+sse_starlette
+duckduckgo-search
