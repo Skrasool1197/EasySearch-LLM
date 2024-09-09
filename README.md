@@ -114,6 +114,12 @@ This project is deployed on the Streamlit Cloud platform. You can directly acces
 https://gotviy9g3yzipzphasls6u.streamlit.app/
 ```
 
+This project is deployed on the HuggingFace Spaces. You can directly access it using the following link:
+
+```bash
+https://huggingface.co/spaces/LeviAc/EasySearch
+```
+
 
 ## Conclusion
 **EasySearch** is a flexible, efficient, and user-friendly tool that brings together multiple sources of information under one platform. With its AI-powered natural language understanding and integration with powerful APIs, EasySearch helps users find relevant text and image data effortlessly.
