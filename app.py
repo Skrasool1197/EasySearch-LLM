@@ -29,7 +29,12 @@ st.markdown('---')
 st.sidebar.title('⚙️Settings')
 st.sidebar.subheader('API Keys')
 api_key = st.sidebar.text_input('**Enter your Groq API Key:**', placeholder='Groq API Key', type='password')
+#st.sidebar.write('Groq API Key')
+st.sidebar.link_button("Create New Groq API Key", 'https://console.groq.com/keys')
+
+
 serper_api_key = st.sidebar.text_input('**Enter your Google Serper API Key:**', placeholder='Google Serper API Key', type='password')
+st.sidebar.link_button("Create New Serper API Key", 'https://serper.dev/api-key')
 
 st.sidebar.markdown('---')
 st.sidebar.caption("Make sure to enter both API keys to unlock full functionality!")
