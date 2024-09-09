@@ -50,21 +50,22 @@ for msg in st.session_state.messages:
 
 # Handle User Input
 if prompt := st.chat_input(placeholder='Ask me.....'):
-    st.session_state.messages.append({'role': 'user', 'content': prompt})
-    st.chat_message('user').write(prompt)
-
-    # LLM Setup
-    # Can use different LLM or models 
-    llm = ChatGroq(
-        groq_api_key=api_key,
-        # model_name="Gemma2-9b-It",
-        model_name = 'llama-3.1-70b-versatile',
-        temperature=0.7
-    )
-    tools = [wiki, arxive, search]
-
-    search_agent = initialize_agent(tools, llm, agent=AgentType.ZERO_SHOT_REACT_DESCRIPTION,handling_parsing_errors=True)
     if api_key and serper_api_key:
+        st.session_state.messages.append({'role': 'user', 'content': prompt})
+        st.chat_message('user').write(prompt)
+
+        # LLM Setup
+        # Can use different LLM or models 
+        llm = ChatGroq(
+            groq_api_key=api_key,
+            # model_name="Gemma2-9b-It",
+            model_name = 'llama-3.1-70b-versatile',
+            temperature=0.7
+        )
+        tools = [wiki, arxive, search]
+
+        search_agent = initialize_agent(tools, llm, agent=AgentType.ZERO_SHOT_REACT_DESCRIPTION,handling_parsing_errors=True)
+        
         with st.spinner('**🤖 Assistant is thinking...**'):
             with st.chat_message('assistant'):
                 callback = StreamlitCallbackHandler(st.container(), expand_new_thoughts=False)
