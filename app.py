@@ -64,28 +64,45 @@ if prompt := st.chat_input(placeholder='Ask me.....'):
     tools = [wiki, arxive, search]
 
     search_agent = initialize_agent(tools, llm, agent=AgentType.ZERO_SHOT_REACT_DESCRIPTION,handling_parsing_errors=True)
-    with st.spinner('**🤖 Assistant is thinking...**'):
-        with st.chat_message('assistant'):
-            callback = StreamlitCallbackHandler(st.container(), expand_new_thoughts=False)
-            res = search_agent.run(st.session_state.messages)
-            #res = search_agent.run(st.session_state.messages, callbacks=[callback])
-            st.session_state.messages.append({'role': 'assistant', 'content': res})
-            st.write(res)
+    if prompt := st.chat_input(placeholder='Ask me.....'):
+    st.session_state.messages.append({'role': 'user', 'content': prompt})
+    st.chat_message('user').write(prompt)
 
-        with st.spinner('🔎 **Searching for relevant images...**'):
-            # Image search query based on user prompt
-            image_search = GoogleSerperAPIWrapper(serper_api_key=serper_api_key, type="images")
-            image_results = image_search.results(prompt)
-            image_urls = [image['imageUrl'] for image in image_results['images'][:2]]
+    # LLM Setup
+    # Can use different LLM or models 
+    llm = ChatGroq(
+        groq_api_key=api_key,
+        # model_name="Gemma2-9b-It",
+        model_name = 'llama-3.1-70b-versatile',
+        temperature=0.7
+    )
+    tools = [wiki, arxive, search]
 
-            # Display the images in the Streamlit app
-            #st.write("Images related to your query:")
-            st.caption('🖼️**Images related to your query:**')
-            cols = st.columns(2)  # Creates four columns for images
-            for idx, url in enumerate(image_urls):
-                with cols[idx]:
-                    st.image(url, use_column_width=True)
+    search_agent = initialize_agent(tools, llm, agent=AgentType.ZERO_SHOT_REACT_DESCRIPTION,handling_parsing_errors=True)
+    if api_key and serper_api_key:
+        with st.spinner('**🤖 Assistant is thinking...**'):
+            with st.chat_message('assistant'):
+                callback = StreamlitCallbackHandler(st.container(), expand_new_thoughts=False)
+                res = search_agent.run(st.session_state.messages)
+                #res = search_agent.run(st.session_state.messages, callbacks=[callback])
+                st.session_state.messages.append({'role': 'assistant', 'content': res})
+                st.write(res)
 
+            with st.spinner('🔎 **Searching for relevant images...**'):
+                # Image search query based on user prompt
+                image_search = GoogleSerperAPIWrapper(serper_api_key=serper_api_key, type="images")
+                image_results = image_search.results(prompt)
+                image_urls = [image['imageUrl'] for image in image_results['images'][:2]]
+
+                # Display the images in the Streamlit app
+                #st.write("Images related to your query:")
+                st.caption('🖼️**Images related to your query:**')
+                cols = st.columns(2)  # Creates four columns for images
+                for idx, url in enumerate(image_urls):
+                    with cols[idx]:
+                        st.image(url, use_column_width=True)
+    else:
+        st.error('Please enter the API Keys in sidebar to start interacting.')
 # Footer
 st.markdown('---')
 st.write("**Developed by Rasool Shaikh | Powered by Groq, Wikipedia, Arxiv, DuckDuckGo, and Google Serper**")
