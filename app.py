@@ -8,7 +8,7 @@ from langchain_community.utilities import GoogleSerperAPIWrapper
 import re
 
 
-# Initialize API Wrappers for Wikipedia and Arxiv
+## Initialize API Wrappers for Wikipedia and Arxiv
 wiki_api_wrapper = WikipediaAPIWrapper(top_k_results=1, doc_content_chars_max=600)
 wiki = WikipediaQueryRun(api_wrapper=wiki_api_wrapper)
 
