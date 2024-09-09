@@ -9,10 +9,10 @@ import re
 
 
 # Initialize API Wrappers for Wikipedia and Arxiv
-wiki_api_wrapper = WikipediaAPIWrapper(top_k_results=1, doc_content_chars_max=200)
+wiki_api_wrapper = WikipediaAPIWrapper(top_k_results=1, doc_content_chars_max=600)
 wiki = WikipediaQueryRun(api_wrapper=wiki_api_wrapper)
 
-arxiv_api_wrapper = ArxivAPIWrapper(top_k_results=1, doc_content_chars_max=200)
+arxiv_api_wrapper = ArxivAPIWrapper(top_k_results=1, doc_content_chars_max=600)
 arxive = ArxivQueryRun(api_wrapper=arxiv_api_wrapper)
 
 # DuckDuckGo for general search
@@ -97,9 +97,9 @@ if prompt := st.chat_input(placeholder='Ask me anything...'):
                         else:
                             st.caption("Sorry, no images found for your query.")
                 except Exception:
-                    st.error("Something went wrong at this moment. Please check your API keys or try again later.")
+                    st.error("It seems you have entered wrong API Key. Please check your API key.")
         except Exception:
-            st.error("Something went wrong at this moment. Please check your API keys or try again later.")
+            st.errorst.error("It seems you have entered wrong API Key. Please check your API key.")
     else:
         st.error('Please enter the API Keys in the sidebar to start interacting.')
 
