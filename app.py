@@ -16,7 +16,7 @@ wiki = WikipediaQueryRun(api_wrapper=wiki_api_wrapper)
 arxiv_api_wrapper = ArxivAPIWrapper(top_k_results=1, doc_content_chars_max=600)
 arxive = ArxivQueryRun(api_wrapper=arxiv_api_wrapper)
 
-# DuckDuckGo for general search
+## DuckDuckGo for general search
 search = DuckDuckGoSearchResults(name='Search')
 
 # Set up Streamlit App
