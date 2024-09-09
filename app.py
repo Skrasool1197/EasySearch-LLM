@@ -5,6 +5,7 @@ from langchain_community.tools import ArxivQueryRun, WikipediaQueryRun, DuckDuck
 from langchain.agents import initialize_agent, AgentType
 from langchain_community.callbacks.streamlit import StreamlitCallbackHandler
 from langchain_community.utilities import GoogleSerperAPIWrapper
+import os 
 import re
 
 
