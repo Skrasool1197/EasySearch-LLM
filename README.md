@@ -111,7 +111,7 @@ The app uses advanced language models to process and understand these queries, e
 This project is deployed on the Streamlit Cloud platform. You can directly access it using the following link:
 
 ```bash
-https://easysearch-llm-k826fdkb3huncarim5xbfn.streamlit.app/
+https://easysearch-llm-eji3ws6rypbf35h7yfs58h.streamlit.app/
 ```
 
 
