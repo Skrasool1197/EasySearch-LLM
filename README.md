@@ -105,6 +105,16 @@ The versatility of EasySearch allows users to experiment with different types of
 - **Image Search:** Users can search for images related to their queries, for instance, "Images of quantum circuits" or "Photos of the Milky Way Galaxy."
 
 The app uses advanced language models to process and understand these queries, ensuring accuracy and relevance.
+
+## Deployment
+
+This project is deployed on the Streamlit Cloud platform. You can directly access it using the following link:
+
+```bash
+https://easysearch-llm-7r6gmohdhmjtzyrwu34wgm.streamlit.app/
+```
+
+
 ## Conclusion
 **EasySearch** is a flexible, efficient, and user-friendly tool that brings together multiple sources of information under one platform. With its AI-powered natural language understanding and integration with powerful APIs, EasySearch helps users find relevant text and image data effortlessly.
 
