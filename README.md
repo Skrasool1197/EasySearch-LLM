@@ -1,4 +1,4 @@
-# EasySearch - A simple and sophisticated search tool
+## EasySearch - A simple and sophisticated search tool
 ![thumbnail](https://github.com/user-attachments/assets/eb112106-a2eb-4b10-8bbd-cc5f59992aa1)
 
 [Click here to see a video about this work](https://youtu.be/yBqtIaDNA5k)
