@@ -11,7 +11,7 @@ A simple and sophisticated search tool to help you get information fast and effi
 
 Whether you're searching for academic papers, general information, or images, EasySearch efficiently handles user queries, thanks to its integration with multiple tools and APIs.
 
-## Documentation
+### Documentation
 
 
 This README file serves as the main documentation for the EasySearch project. For detailed API documentation, refer to the API Reference section below.
